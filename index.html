@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #1c1c2c, #2b2b40);
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
       color: white;
       overflow-x: hidden;
     }
@@ -17,56 +17,50 @@
       position: relative;
       text-align: center;
       padding: 100px 20px 60px;
-      background: #1c1c2c;
-      overflow: hidden;
+      background: #0f0f0f;
     }
 
     header h1 {
       font-size: 3.5em;
       font-weight: bold;
-      color: #f5b1e1;
-      letter-spacing: 2px;
+      color: #ff69b4; /* fucsia brillante */
+      letter-spacing: 3px;
     }
 
     header p {
-      font-size: 1.2em;
-      color: #e3d4e3;
-      margin-top: 10px;
+      font-size: 1.3em;
+      color: #c0c0c0; /* plateado */
     }
 
     .bubble {
       position: absolute;
-      background: rgba(255, 192, 203, 0.15);
+      background: rgba(255, 105, 180, 0.1); /* fucsia transparente */
       border-radius: 50%;
-      animation: float 10s infinite ease-in-out;
+      animation: float 12s infinite ease-in-out;
     }
 
-    /* Burbujas originales */
-    .bubble:nth-child(3) { width: 60px; height: 60px; top: 10%; left: 15%; animation-delay: 0s; }
-    .bubble:nth-child(4) { width: 80px; height: 80px; top: 20%; left: 70%; animation-delay: 2s; }
-    .bubble:nth-child(5) { width: 40px; height: 40px; top: 50%; left: 30%; animation-delay: 4s; }
-    .bubble:nth-child(6) { width: 100px; height: 100px; top: 60%; left: 80%; animation-delay: 6s; }
-
-    /* Burbujas nuevas */
-    .bubble:nth-child(7) { width: 30px; height: 30px; top: 30%; left: 10%; animation-delay: 1s; animation-duration: 12s; }
-    .bubble:nth-child(8) { width: 90px; height: 90px; top: 70%; left: 50%; animation-delay: 3s; animation-duration: 9s; }
-    .bubble:nth-child(9) { width: 50px; height: 50px; top: 15%; left: 85%; animation-delay: 5s; animation-duration: 11s; }
-    .bubble:nth-child(10){ width: 70px; height: 70px; top: 40%; left: 40%; animation-delay: 7s; animation-duration: 13s; }
+    .bubble:nth-child(3)  { width: 60px; height: 60px; top: 10%; left: 10%; animation-delay: 0s; }
+    .bubble:nth-child(4)  { width: 90px; height: 90px; top: 20%; left: 80%; animation-delay: 2s; }
+    .bubble:nth-child(5)  { width: 45px; height: 45px; top: 50%; left: 25%; animation-delay: 4s; }
+    .bubble:nth-child(6)  { width: 110px; height: 110px; top: 60%; left: 75%; animation-delay: 6s; }
+    .bubble:nth-child(7)  { width: 30px; height: 30px; top: 40%; left: 50%; animation-delay: 1s; }
+    .bubble:nth-child(8)  { width: 75px; height: 75px; top: 70%; left: 15%; animation-delay: 3s; }
+    .bubble:nth-child(9)  { width: 50px; height: 50px; top: 80%; left: 60%; animation-delay: 5s; }
+    .bubble:nth-child(10) { width: 95px; height: 95px; top: 30%; left: 90%; animation-delay: 7s; }
 
     @keyframes float {
-      0% { transform: translateY(0); opacity: 0.6; }
+      0% { transform: translateY(0); opacity: 0.5; }
       50% { transform: translateY(-40px); opacity: 1; }
-      100% { transform: translateY(0); opacity: 0.6; }
+      100% { transform: translateY(0); opacity: 0.5; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>RosGrace</h1>
-    <p>Moda con actitud. Elegancia femenina en cada prenda 👛✨</p>
-
-    <!-- Burbujas -->
+    <h1>Ros_Grace</h1>
+    <p>Moda femenina con actitud 💋</p>
+    
     <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
@@ -76,174 +70,6 @@
     <div class="bubble"></div>
     <div class="bubble"></div>
   </header>
-<section class="intro">
-  <div class="intro-content">
-    <h2>Descubre tu esencia con RosGrace</h2>
-    <p>Diseñamos para mujeres auténticas, elegantes y decididas. Cada prenda cuenta una historia de estilo, fuerza y belleza.</p>
-    <a href="#colecciones" class="btn-explorar">Explorar Colecciones</a>
-  </div>
-</section>
-
-<style>
-  .intro {
-    background: #2b2b40;
-    padding: 80px 20px;
-    text-align: center;
-  }
-
-  .intro-content h2 {
-    font-size: 2.5em;
-    color: #f5b1e1;
-    margin-bottom: 20px;
-  }
-
-  .intro-content p {
-    font-size: 1.1em;
-    color: #e3d4e3;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    line-height: 1.6;
-  }
-
-  .btn-explorar {
-    background-color: #f5b1e1;
-    color: #1c1c2c;
-    text-decoration: none;
-    padding: 12px 30px;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-  }
-
-  .btn-explorar:hover {
-    background-color: #ffffff;
-    color: #2b2b40;
-    box-shadow: 0 0 10px #f5b1e1;
-  }
-</style>
-<section id="colecciones" class="colecciones">
-  <h2>Colecciones</h2>
-  <div class="grid">
-    <div class="card">🖤<span>Casual</span></div>
-    <div class="card">💼<span>Elegante</span></div>
-    <div class="card">🏖<span>Verano</span></div>
-    <div class="card">🌃<span>Urbano</span></div>
-    <div class="card">👗<span>Vestidos</span></div>
-    <div class="card">🎀<span>Accesorios</span></div>
-  </div>
-</section>
-
-<style>
-  .colecciones {
-    background: #1c1c2c;
-    padding: 80px 20px;
-    text-align: center;
-  }
-
-  .colecciones h2 {
-    font-size: 2.5em;
-    color: #f5b1e1;
-    margin-bottom: 40px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .card {
-    background: #2b2b40;
-    border: 2px solid #f5b1e1;
-    border-radius: 20px;
-    padding: 30px 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #f5b1e1;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-  }
-<div class="grid">
-  <div class="card">
-    🖤<span>Casual</span>
-    <ul class="subcat">
-      <li>Polos</li>
-      <li>Blusas</li>
-      <li>Pantalones</li>
-    </ul>
-  </div>
-  <div class="card">
-    💼<span>Elegante</span>
-    <ul class="subcat">
-      <li>Blazers</li>
-      <li>Vestidos</li>
-      <li>Camisas</li>
-    </ul>
-  </div>
-  <div class="card">
-    🏖<span>Verano</span>
-    <ul class="subcat">
-      <li>Crop tops</li>
-      <li>Shorts</li>
-      <li>Vestidos frescos</li>
-    </ul>
-  </div>
-  <div class="card">
-    🌃<span>Urbano</span>
-    <ul class="subcat">
-      <li>Oversize</li>
-      <li>Joggers</li>
-      <li>Chaquetas</li>
-    </ul>
-  </div>
-  <div class="card">
-    👗<span>Vestidos</span>
-    <ul class="subcat">
-      <li>Cortos</li>
-      <li>Largos</li>
-      <li>De noche</li>
-    </ul>
-  </div>
-  <div class="card">
-    🎀<span>Accesorios</span>
-    <ul class="subcat">
-      <li>Aretes</li>
-      <li>Collares</li>
-      <li>Bolsos</li>
-    </ul>
-  </div>
-</div>
-.subcat {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  font-size: 0.9em;
-  color: #ddd;
-}
-
-.card:hover .subcat {
-  opacity: 1;
-  max-height: 200px;
-}
-
-.subcat li {
-  margin: 5px 0;
-  transition: transform 0.3s ease;
-}
-
-.subcat li:hover {
-  transform: translateX(5px);
-  color: #f5b1e1;
-}
-
-  
-</style>
 
 </body>
 </html>
