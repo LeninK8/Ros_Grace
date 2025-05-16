@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RosGrace</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #1c1c2c, #2b2b40);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: #1c1c2c;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      font-weight: bold;
+      color: #f5b1e1;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #e3d4e3;
+    }
+
+    .bubble {
+      position: absolute;
+      background: rgba(255, 192, 203, 0.15);
+      border-radius: 50%;
+      animation: float 10s infinite ease-in-out;
+    }
+
+    .bubble:nth-child(1) { width: 60px; height: 60px; top: 10%; left: 15%; animation-delay: 0s; }
+    .bubble:nth-child(2) { width: 80px; height: 80px; top: 20%; left: 70%; animation-delay: 2s; }
+    .bubble:nth-child(3) { width: 40px; height: 40px; top: 50%; left: 30%; animation-delay: 4s; }
+    .bubble:nth-child(4) { width: 100px; height: 100px; top: 60%; left: 80%; animation-delay: 6s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(-40px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.6; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>RosGrace</h1>
+    <p>Estilo que florece en cada detalle 🌸</p>
+    
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </header>
+
+</body>
+</html>
 
