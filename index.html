@@ -165,16 +165,84 @@
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
   }
+<div class="grid">
+  <div class="card">
+    🖤<span>Casual</span>
+    <ul class="subcat">
+      <li>Polos</li>
+      <li>Blusas</li>
+      <li>Pantalones</li>
+    </ul>
+  </div>
+  <div class="card">
+    💼<span>Elegante</span>
+    <ul class="subcat">
+      <li>Blazers</li>
+      <li>Vestidos</li>
+      <li>Camisas</li>
+    </ul>
+  </div>
+  <div class="card">
+    🏖<span>Verano</span>
+    <ul class="subcat">
+      <li>Crop tops</li>
+      <li>Shorts</li>
+      <li>Vestidos frescos</li>
+    </ul>
+  </div>
+  <div class="card">
+    🌃<span>Urbano</span>
+    <ul class="subcat">
+      <li>Oversize</li>
+      <li>Joggers</li>
+      <li>Chaquetas</li>
+    </ul>
+  </div>
+  <div class="card">
+    👗<span>Vestidos</span>
+    <ul class="subcat">
+      <li>Cortos</li>
+      <li>Largos</li>
+      <li>De noche</li>
+    </ul>
+  </div>
+  <div class="card">
+    🎀<span>Accesorios</span>
+    <ul class="subcat">
+      <li>Aretes</li>
+      <li>Collares</li>
+      <li>Bolsos</li>
+    </ul>
+  </div>
+</div>
+.subcat {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  font-size: 0.9em;
+  color: #ddd;
+}
 
-  .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 20px rgba(245, 177, 225, 0.4);
-  }
+.card:hover .subcat {
+  opacity: 1;
+  max-height: 200px;
+}
 
-  .card span {
-    display: block;
-    margin-top: 10px;
-  }
+.subcat li {
+  margin: 5px 0;
+  transition: transform 0.3s ease;
+}
+
+.subcat li:hover {
+  transform: translateX(5px);
+  color: #f5b1e1;
+}
+
+  
 </style>
 
 </body>
