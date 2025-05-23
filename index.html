@@ -23,35 +23,45 @@
     header h1 {
       font-size: 3.5em;
       font-weight: bold;
-      color: #ff69b4; /* fucsia brillante */
+      color: #ff69b4;
       letter-spacing: 3px;
     }
 
     header p {
       font-size: 1.3em;
-      color: #c0c0c0; /* plateado */
+      color: #c0c0c0;
     }
 
     .bubble {
       position: absolute;
-      background: rgba(255, 105, 180, 0.1); /* fucsia transparente */
+      background: rgba(255, 215, 0, 0.15);
       border-radius: 50%;
-      animation: float 12s infinite ease-in-out;
+      animation: float 8s infinite ease-in-out;
+      cursor: pointer;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    .bubble:nth-child(3)  { width: 60px; height: 60px; top: 10%; left: 10%; animation-delay: 0s; }
-    .bubble:nth-child(4)  { width: 90px; height: 90px; top: 20%; left: 80%; animation-delay: 2s; }
-    .bubble:nth-child(5)  { width: 45px; height: 45px; top: 50%; left: 25%; animation-delay: 4s; }
-    .bubble:nth-child(6)  { width: 110px; height: 110px; top: 60%; left: 75%; animation-delay: 6s; }
-    .bubble:nth-child(7)  { width: 30px; height: 30px; top: 40%; left: 50%; animation-delay: 1s; }
-    .bubble:nth-child(8)  { width: 75px; height: 75px; top: 70%; left: 15%; animation-delay: 3s; }
-    .bubble:nth-child(9)  { width: 50px; height: 50px; top: 80%; left: 60%; animation-delay: 5s; }
-    .bubble:nth-child(10) { width: 95px; height: 95px; top: 30%; left: 90%; animation-delay: 7s; }
+    .bubble.explode {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+
+    .kiss {
+      position: absolute;
+      font-size: 2em;
+      animation: fadeOut 2s forwards;
+      pointer-events: none;
+    }
 
     @keyframes float {
-      0% { transform: translateY(0); opacity: 0.5; }
-      50% { transform: translateY(-40px); opacity: 1; }
-      100% { transform: translateY(0); opacity: 0.5; }
+      0% { transform: translateY(0); opacity: 0.4; }
+      50% { transform: translateY(-80px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.4; }
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(2); }
     }
   </style>
 </head>
@@ -60,7 +70,7 @@
   <header>
     <h1>Ros_Grace</h1>
     <p>Moda femenina con actitud 💋</p>
-    
+
     <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
@@ -69,6 +79,51 @@
     <div class="bubble"></div>
     <div class="bubble"></div>
     <div class="bubble"></div>
+  </header>
+
+  <script>
+    const bubbles = document.querySelectorAll('.bubble');
+
+    // Posiciones y delays
+    const positions = [
+      { top: '10%', left: '10%', delay: '0s' },
+      { top: '20%', left: '80%', delay: '2s' },
+      { top: '50%', left: '25%', delay: '4s' },
+      { top: '60%', left: '75%', delay: '6s' },
+      { top: '40%', left: '50%', delay: '1s' },
+      { top: '70%', left: '15%', delay: '3s' },
+      { top: '80%', left: '60%', delay: '5s' },
+      { top: '30%', left: '90%', delay: '7s' },
+    ];
+
+    bubbles.forEach((bubble, index) => {
+      const size = Math.floor(Math.random() * 50) + 40;
+      bubble.style.width = size + 'px';
+      bubble.style.height = size + 'px';
+      bubble.style.top = positions[index].top;
+      bubble.style.left = positions[index].left;
+      bubble.style.animationDelay = positions[index].delay;
+
+      bubble.addEventListener('click', (e) => {
+        // Efecto de explosión
+        bubble.classList.add('explode');
+
+        // Mostrar 💋
+        const kiss = document.createElement('div');
+        kiss.classList.add('kiss');
+        kiss.textContent = '💋';
+        kiss.style.top = e.clientY + 'px';
+        kiss.style.left = e.clientX + 'px';
+        document.body.appendChild(kiss);
+
+        // Quitar burbuja y 💋 después de animación
+        setTimeout(() => {
+          bubble.remove();
+          kiss.remove();
+        }, 2000);
+      });
+    });
+  </script>
   </header>
   <section style="padding: 80px 20px; text-align: center; background: #1a1a1a;">
   <h2 style="font-size: 2.5em; color: #ff69b4; margin-bottom: 20px;">Bienvenida a Ros_Grace</h2>
