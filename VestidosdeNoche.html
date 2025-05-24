@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vestidos de Noche - Ros_Grace</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0e0e0e;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ffd700;
+    }
+    header h1 {
+      color: #ffd700;
+      margin: 0;
+    }
+    .contenedor {
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    .producto {
+      background-color: #2c2c2c;
+      border-radius: 20px;
+      width: 280px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+      text-align: center;
+    }
+    .producto img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .producto h3 {
+      color: #ffe599;
+      margin: 15px 0 5px;
+    }
+    .producto p {
+      color: #ccc;
+    }
+    a.volver {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      background: #ffd700;
+      color: #000;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.volver:hover {
+      background: #e6c200;
+    }
+    .firefly {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #ffd700;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ffd700;
+      animation: move 10s linear infinite;
+    }
+    @keyframes move {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--x), var(--y)) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
 
+  <header>
+    <h1>✨ Vestidos de Noche</h1>
+    <p>Diseñados para brillar bajo las estrellas.</p>
+  </header>
+
+  <div class="contenedor">
+    <div class="producto">
+      <img src="https://bing.com/th/id/BCO.664b854f-5dac-4b3f-94ef-1cbdc522b971.png" alt="Vestido Negro Elegante">
+      <h3>Vestido Negro Elegante</h3>
+      <p>Sofisticación pura para noches inolvidables.</p>
+    </div>
+    <div class="producto">
+      <img src="https://bing.com/th/id/BCO.d8f7988e-20e2-486c-9805-6a364f9497cd.png" alt="Vestido Azul Medianoche">
+      <h3>Vestido Azul Medianoche</h3>
+      <p>Reflejo de cielo estrellado en cada curva.</p>
+    </div>
+    <div class="producto">
+      <img src="https://bing.com/th/id/BCO.f18c1a23-e758-4b20-a35c-742dbce48d8d.png" alt="Vestido Rojo Rubí">
+      <h3>Vestido Rojo Rubí</h3>
+      <p>Pasión, poder y glamour absoluto.</p>
+    </div>
+    <div class="producto">
+      <img src="https://bing.com/th/id/BCO.993d66cf-4bde-49ef-993a-86745385d69a.png" alt="Vestido Blanco Perlado">
+      <h3>Vestido Blanco Perlado</h3>
+      <p>Brilla con la elegancia de la luna.</p>
+    </div>
+    <div class="producto">
+      <img src="https://bing.com/th/id/BCO.a1f4a372-6ad6-4f7b-915e-2f48e0e0973a.png" alt="Vestido Dorado Imperial">
+      <h3>Vestido Dorado Imperial</h3>
+      <p>Para reinas de la noche con porte y poder.</p>
+    </div>
+    <div class="producto">
+      <img src="https://bing.com/th/id/BCO.4a7b582f-f5ef-4a30-9f37-4e4d9dc40f4d.png" alt="Vestido Verde Esmeralda">
+      <h3>Vestido Verde Esmeralda</h3>
+      <p>Exótico, vibrante y magnético.</p>
+    </div>
+  </div>
+
+  <div style="text-align: center; z-index: 2; position: relative;">
+    <a class="volver" href="index.html">← Volver al Inicio</a>
+  </div>
+
+  <script>
+    const crearLuciérnaga = () => {
+      const firefly = document.createElement('div');
+      firefly.classList.add('firefly');
+      firefly.style.left = Math.random() * 100 + 'vw';
+      firefly.style.top = Math.random() * 100 + 'vh';
+      firefly.style.setProperty('--x', `${Math.random() * 200 - 100}px`);
+      firefly.style.setProperty('--y', `${Math.random() * 200 - 100}px`);
+      document.body.appendChild(firefly);
+      setTimeout(() => firefly.remove(), 10000);
+    }
+    setInterval(crearLuciérnaga, 500);
+  </script>
+
+</body>
+</html>
