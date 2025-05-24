@@ -34,10 +34,15 @@
       padding: 20px;
       box-shadow: 0 0 20px rgba(255,215,0,0.08);
       text-align: center;
+      position: relative;
     }
     .producto img {
       width: 100%;
       border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    .producto img:hover {
+      transform: scale(1.05);
     }
     .producto h3 {
       color: #ffe599;
@@ -56,6 +61,16 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .like-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #ffd700;
+    }
     .regresar {
       text-align: center;
       margin: 40px 0;
@@ -73,6 +88,11 @@
       background-color: #e6c200;
     }
   </style>
+  <script>
+    function darLike(nombre) {
+      alert(`¡Añadiste "${nombre}" a tus favoritos! ❤️`);
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -82,36 +102,42 @@
 
   <section class="productos">
     <div class="producto">
+      <button class="like-btn" onclick="darLike('Blusa Blanca Ligera')">❤️</button>
       <img src="https://via.placeholder.com/240x240?text=Blusa+Blanca" alt="Blusa Blanca">
       <h3>Blusa Blanca Ligera</h3>
       <p>S/42.90</p>
       <a class="boton-wsp" href="https://wa.me/51999999999" target="_blank">Pedir por WhatsApp</a>
     </div>
     <div class="producto">
+      <button class="like-btn" onclick="darLike('Blusa Negra Elegante')">❤️</button>
       <img src="https://via.placeholder.com/240x240?text=Blusa+Negra" alt="Blusa Negra">
       <h3>Blusa Negra Elegante</h3>
       <p>S/46.90</p>
       <a class="boton-wsp" href="https://wa.me/51999999999" target="_blank">Pedir por WhatsApp</a>
     </div>
     <div class="producto">
+      <button class="like-btn" onclick="darLike('Blusa Floral Primavera')">❤️</button>
       <img src="https://via.placeholder.com/240x240?text=Blusa+Floral" alt="Blusa Floral">
       <h3>Blusa Floral Primavera</h3>
       <p>S/44.50</p>
       <a class="boton-wsp" href="https://wa.me/51999999999" target="_blank">Pedir por WhatsApp</a>
     </div>
     <div class="producto">
+      <button class="like-btn" onclick="darLike('Blusa Transparente')">❤️</button>
       <img src="https://via.placeholder.com/240x240?text=Blusa+Transparente" alt="Blusa Transparente">
       <h3>Blusa Transparente</h3>
       <p>S/48.90</p>
       <a class="boton-wsp" href="https://wa.me/51999999999" target="_blank">Pedir por WhatsApp</a>
     </div>
     <div class="producto">
+      <button class="like-btn" onclick="darLike('Blusa Rosa Pastel')">❤️</button>
       <img src="https://via.placeholder.com/240x240?text=Blusa+Rosa" alt="Blusa Rosa">
       <h3>Blusa Rosa Pastel</h3>
       <p>S/39.90</p>
       <a class="boton-wsp" href="https://wa.me/51999999999" target="_blank">Pedir por WhatsApp</a>
     </div>
     <div class="producto">
+      <button class="like-btn" onclick="darLike('Blusa Off Shoulder')">❤️</button>
       <img src="https://via.placeholder.com/240x240?text=Blusa+Off+Shoulder" alt="Blusa Off Shoulder">
       <h3>Blusa Off Shoulder</h3>
       <p>S/50.00</p>
@@ -124,4 +150,3 @@
   </div>
 </body>
 </html>
-
